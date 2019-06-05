@@ -37,6 +37,7 @@ def classifier():
 		print(lang)
 		if lang != 'en':
 			response = {
+                        'status':'failure',
 			'error': 'Language of target site `{}` not supported yet. Only English Language supported'.format(lang)
 		}
 		else:
@@ -46,6 +47,7 @@ def classifier():
 			y_new = model.predict(X_new)
 			y_class = class_mapping[y_new[0]]
 			response = {
+                                'status':'success',
 				'url': url,
 				'category': y_class
 
@@ -53,6 +55,7 @@ def classifier():
 
 	else:
 		response = {
+                        'status':'failure',
 			'error': 'URL {} not found or took too long to respond'.format(url)
 		}
 
