@@ -2,7 +2,7 @@
 A text classifier API that accepts url of a company and returns the industry the company belongs to.
 
 ## Demo
-- The API is running at **http://databaaz.me:8080/classifier**
+- The API is running at **http://databaaz.me:8080/classifier** (not running anymore)
 - You can send a curl POST command to the above address along with JSON data carrying **url** field with URL of the business as its value.
 - The response will be a JSON data having **status** field with value either *success* or *failure*.
 - In case of a *failure*, the corresponding error message will be stored in JSON response under **error** field.
